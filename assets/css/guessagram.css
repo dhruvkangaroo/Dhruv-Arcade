@@ -1,0 +1,81 @@
+#word-grid, #guess-input {
+    display: grid;
+    background-color: var(--secondary-background);
+    max-width: fit-content;
+    margin: 1rem auto;
+}
+
+#guess-input {
+    display: flex;
+}
+
+.cell {
+    border: 2px solid var(--primary-background);
+    border-radius: 1px;
+    box-shadow: 0 2px 2px 0 rgb(0, 0, 0, 0.2);
+    width: 40px;
+    height: 40px;
+    color: var(--secondary-text);
+    font-size: 48;
+    font-family: "Press Start 2P", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guess-cell {
+    text-align: center;
+    background-color: transparent;
+}
+
+.correct-letter {
+    background-color: #a85008;
+}
+
+.correct-place {
+    background-color: #01680b;
+}
+
+.wrong-letter {
+    background-color: inherit;
+}
+
+#keyboard {
+    max-width: 340px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    margin: 1rem auto;
+}
+
+.key {
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    margin: 0 !important;
+}
+
+.guessed {
+    background-color: var(#5c5c5c);
+}
+
+#options {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 1rem;
+}
+
+input {
+    accent-color: var(--secondary-text); 
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+#guess-button {
+    margin: 0 auto;
+}

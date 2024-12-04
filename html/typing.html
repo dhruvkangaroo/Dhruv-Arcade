@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Pixel Arcade is a collection of single player games for mobile and desktop browsers.">
+  <meta name="keywords" content="Pixel Arcade, games, gaming, mobile, browser, HTML, CSS, JavaScript">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/typing.css" rel="stylesheet">
+  <title>Pixel's Arcade | Typing Test</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+</head>
+
+<body>
+  <!-- Header containing title link, logos and navbar -->
+  <header>
+    <div id="header-title">
+      <img src="../assets/images/pixel-head-green.png" alt="Green pixel head logo">
+      <a href="../index.html" aria-label="Navigates to home menu page"> Pixel's Arcade </a>
+      <img src="../assets/images/pixel-head-green.png" alt="Green pixel head logo">
+    </div>
+    <div id="header-menu">
+      <button id="open-menu" type="button" aria-label="Open menu">Menu</button>
+    </div>
+  </header>
+
+  <!-- Main section containing the game menu-->
+  <section id="main-screen">
+
+    <!-- Menu modal -->
+    <div class="menu-pop-up">
+      <div class="menu-pop-up-card">
+        <h2>Menu</h2>
+        <ul>
+          <li>
+            <a href="../index.html" aria-label="Home screen">Home</a>
+          </li>
+        </ul>
+        <ol id="list-of-games"></ol>
+      </div>
+      <button id="close-menu" type="button" aria-label="Close">Close</button>
+    </div>
+
+    <h1>Typing Test</h1>
+    <p id="instructions">Instructions</p>
+
+    <div id="board">
+      <!-- Game Buttons -->
+      <div id="buttons">
+        <button id="start">Start!</button>
+        <button id="reset">Reset</button>
+      </div>
+
+      <!-- Terminal -->
+      <div class="terminal">
+            <div id="stats">
+                <div>Time: <p id="time-left"></p></div>
+                <div>WPM: <p id="wpm"></p></div>
+                <div>CPM: <p id="cpm"></p></div>
+                <div>Errors: <p id="errors"></p></div>
+            </div>
+            <p id="test-text">
+
+            </p>
+            <input id="user-input" type="text">
+      </div>
+    </div>
+
+    <!-- Instruction pop up-->
+    <div id="intro" class="pop-up">
+      <div class="pop-up-card">
+        <h2>Welcome to the Typing Test!</h2>
+        <p>Click Start to generate your page of text.</p>
+        <p>Type as accurately and quickly as you can.</p>
+        <button id="close-pop-up">Got It!</button>
+      </div>
+    </div>
+
+    <!-- Game Over -->
+    <div id="game-over" class="pop-up">
+      <div id="end" class="pop-up-card">
+        <h2>Game Over!</h2>
+        <p id="overall"></p>
+        <div>CPM: <p id="cpm-result"></p></div>
+        <div>WPM: <p id="wpm-result"></p></div>
+        <div>Accuracy: <p id="accuracy"></p>%</div>
+        <a href="typing.html">Play Again</a>
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+
+  </section>
+  <!-- Footer with social links -->
+  <footer>
+    <button id="toggle-display">Toggle Display</button>
+  </footer>
+  <script src="../assets/scripts/theme.js"></script>
+  <script src="../assets/scripts/typing.js"></script>
+  <script src="../assets/scripts/popups.js"></script>
+  <script src="../assets/scripts/gamemenu.js"></script>
+</body>
+
+</html>

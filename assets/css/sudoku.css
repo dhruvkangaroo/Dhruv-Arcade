@@ -1,0 +1,82 @@
+#board {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 273px;
+    height: 273px;
+    position: absolute;
+    z-index: 1;
+}
+
+#board-underlay {
+    border: 1px solid black;
+    width: 273px;
+    height: 273px;
+    margin: 1rem auto;
+    position: relative;
+    background: repeating-conic-gradient(#e4e4e4 0% 25%, transparent 0% 50%) 100% 100% / 182px 180px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.active {
+    border: 1px solid blue;
+    background-color: lightblue;
+    opacity: 0.2;
+}
+
+.wrong {
+    border: 1px solid red;
+    background-color: pink;
+    opacity: 0.2;
+}
+
+#user-input,
+#buttons,
+#note-input {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 8px;
+    margin: 1rem auto;
+    width: 300px;
+}
+
+.btn {
+    min-width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 24px;
+    margin: 5px;
+}
+
+.note {
+    font-size: 12px;
+    color: red;
+    line-height: 12px;
+    z-index: -1;
+}
+
+#message,
+#give-up {
+    margin: 1rem auto;
+    width: 300px;
+    text-align: center;
+    display: none;
+}

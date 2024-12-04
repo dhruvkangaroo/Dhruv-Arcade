@@ -1,0 +1,61 @@
+#stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+/* User display */
+.choice-display, #placeholders {
+  max-width: 600px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: auto auto auto;
+}
+
+/* Grid styling */
+.grid {
+  max-width: 600px;
+  max-height: 600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto;
+}
+
+/* Styling for the cards */
+.card, .question-card {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 15px auto;
+  padding: 2px;
+  background: var(--menu-background) center / contain no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 4px var(--shadow);
+}
+
+.question-card {
+  background-image: url("../images/missing-item/missing-logo-white.png");
+}
+
+#round {
+  display: none;
+}
+
+#next-round {
+  background-color: var(--menu-background);
+  color: var(--menu-text);
+  padding: 1em 2em;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: 0.6s;
+  font-weight: 900;
+}
+
+#next-round:hover {
+  background-color: var(--apple-dark-green);
+  color: var(--apple-white);
+}
+
+/* Next round button styling in main.css in case want to incorporate into other games */

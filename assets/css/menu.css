@@ -1,0 +1,70 @@
+/* Styling for menu section of index.html */
+#game-list {
+  min-height: 60vh;
+  max-width: 80%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.game-selection {
+  width: 150px;
+  height: 150px;
+  margin: 60px 30px;
+}
+
+.game-selection img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 8px;
+  object-fit: contain;
+}
+
+.title {
+  color: var(--primary-text);
+  font-size: 1.25rem;
+}
+
+.background-card {
+  background-color: #282828;
+  border-radius: 20px;
+}
+
+/* Media queries */
+@media (min-width: 2250px) {
+  .game-selection {
+    margin: 80px
+  }
+}
+@media (max-width: 840px),
+(max-height: 810px) {
+  #game-list {
+    max-width: 90%;
+  }
+  .game-selection {
+    width: 100px;
+    height: 100px;
+    margin: 20px 20px 40px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 520px),
+(max-height: 630px) {
+  .game-selection {
+    width: 80px;
+    height: 80px;
+    margin: 30px;
+  }
+  .title {
+    font-size: 0.75rem;
+  }
+}

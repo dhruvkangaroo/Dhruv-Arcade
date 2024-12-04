@@ -1,0 +1,95 @@
+#guess-area, #final-guess-area, #show-final-guess, #answer-display, #autoflip-on {
+    display: none;
+}
+
+#show-final-guess {
+    margin: 2rem auto;
+}
+
+#correct-image {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+}
+
+#answer-display {
+    border: 2px solid var(--secondary-background);
+    margin: 1em 4em;
+    padding: 1em;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid var(--secondary-background);
+    background: transparent;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--primary-text);
+    font-family: "Press Start 2P";
+    width: 360px;
+}
+
+/* Grid styling */
+.grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+/* Styling for the cards */
+.card {
+    width: 100px;
+    height: 120px;
+    position: relative;
+    margin: 15px auto;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border-radius: 10px;
+    background-color: var(--secondary-background);
+    box-shadow: 0 0 4px 4px var(--shadow);
+
+}
+
+.char-name {
+    color: var(--menu-text);
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+}
+
+.card:active {
+    -webkit-transform: scale(0.97);
+    transform: scale(0.97);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.card.flip {
+    -webkit-transform: rotateX(180deg) translateZ(1px);
+    transform: rotateX(180deg) translateZ(1px);
+}
+
+.back-face,
+.front-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: top / contain no-repeat;
+    border-radius: 10px;
+}
+
+.back-face {
+    -webkit-transform: rotateX(180deg) translateZ(1px);
+    transform: rotateX(180deg) translateZ(1px);
+    background-color: transparent;
+}

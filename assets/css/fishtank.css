@@ -1,0 +1,11 @@
+#show-tanks, #show-fish, #show-misc, #options {
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+
+.shop-imgs {
+    width: 32px;
+    height: auto;
+    object-fit: contain;
+}

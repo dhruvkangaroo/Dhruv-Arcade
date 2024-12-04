@@ -1,0 +1,38 @@
+
+
+.table-heading {
+    width: 34px;
+    overflow-wrap: break-word;
+}
+
+th {
+    padding: 1rem;
+}
+
+table {
+    margin: 0 auto;
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50vh
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 1rem;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid var(--secondary-background);
+    color: var(--primary-text);
+    background: transparent;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 2rem;
+    font-family: "Press Start 2P";
+}

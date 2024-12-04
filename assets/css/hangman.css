@@ -1,0 +1,46 @@
+/* Stats styling */
+#stats {
+    margin: 12px auto;
+}
+
+#stats > div {
+    margin-bottom: 12px;
+}
+
+#guesses {
+    overflow-wrap: break-word;
+}
+
+/* Board styling */
+#board {
+    display: none;
+    flex-direction: column;
+    justify-content: evenly;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Picture styling */
+#picture {
+    background-size: auto;
+    width: min(80vw, 400px);
+    height: auto;
+}
+
+/* Word styling */
+#word-display {
+    font-size: 2rem;
+}
+
+/* Input styling */
+input {
+    font-family: "Press Start 2P";
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid var(--secondary-background);
+    background: transparent;
+    font-size: 1.5em;
+    text-align: center;
+    width: min(80vw, 360px);
+    color: var(--primary-text);
+}

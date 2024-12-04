@@ -1,0 +1,114 @@
+/* Time and score styling */
+#timer, #scoreboard {
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#stats {
+  width: min(500px, 80vw);
+  margin: 15px auto;
+}
+
+#timer {
+  float: left;
+}
+
+#scoreboard {
+  float: right;
+}
+
+/* Styling for board */
+#board {
+  background-image: url("../images/rabbit/rabbit-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: min(60vh, 600px);
+  width: min(80vw, 400px);
+  clear: both;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  padding-bottom: 16px;
+  box-shadow: 10px 10px 5px var(--apple-black);
+}
+
+.hole {
+  display: flex;
+  flex: 33%;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hole::after {
+  content: "";
+  display: block;
+  background-image: url("../images/rabbit/hole.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: -20px;
+  width: 90%;
+  height: 50px;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.rabbit {
+  background-image: url("../images/rabbit/rabbit.png");
+  position: absolute;
+  top: 100%;
+  width: 90%;
+  height: 100%;
+  transition: top 0.5s linear;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  cursor: pointer;
+}
+
+.mole {
+  background-image: url("../images/rabbit/mole.png") !important;
+}
+
+.hole.up .rabbit, .hole.up .mole {
+  top: 0;
+}
+
+
+/* Media queries */
+@media (max-width: 580px) {
+  button {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  #scoreboard {
+    padding-right: 18px;
+  }
+  #timer {
+    padding-left: 18px;
+  }
+  #board {
+    margin: 10px auto;
+  }
+  .hole::after {
+    bottom: -30px;
+  }
+}
+
+@media (max-width: 319px) {
+  .hole::after {
+    bottom: -34px;
+  }
+}
+
+@media (max-height: 1000px) {
+  h2 {
+    font-size: 1em;
+  }
+}

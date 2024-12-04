@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Pixel Arcade is a collection of single player games for mobile and desktop browsers.">
+  <meta name="keywords" content="Pixel Arcade, games, gaming, mobile, browser, HTML, CSS, JavaScript">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/simon.css" rel="stylesheet">
+  <title>Pixel's Arcade | Simon</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+</head>
+
+<body>
+  <!-- Header containing title link, logos and navbar -->
+  <header>
+    <div id="header-title">
+      <img src="../assets/images/pixel-head-green.png" alt="Green pixel head logo">
+      <a href="../index.html" aria-label="Navigates to home menu page"> Pixel's Arcade </a>
+      <img src="../assets/images/pixel-head-green.png" alt="Green pixel head logo">
+    </div>
+    <div id="header-menu">
+      <button id="open-menu" type="button" aria-label="Open menu">Menu</button>
+    </div>
+  </header>
+
+  <!-- Main section containing the game menu-->
+  <section id="main-screen">
+
+    <!-- Menu modal -->
+    <div class="menu-pop-up">
+      <div class="menu-pop-up-card">
+        <h2>Menu</h2>
+        <ul>
+          <li>
+            <a href="../index.html" aria-label="Home screen">Home</a>
+          </li>
+        </ul>
+        <ol id="list-of-games"></ol>
+      </div>
+      <button id="close-menu" type="button" aria-label="Close">Close</button>
+    </div>
+
+    <h1>Simon</h1>
+    <p id="instructions">Instructions</p>
+
+    <div id="details">
+        <div id="board-options">
+          <button id="foursquares">4 Squares</button>
+          <button id="sixsquares">6 Squares</button>
+          <button id="ninesquares">9 Squares</button>
+          <button id="reset">Reset</button>
+        </div>
+        <div id="options">
+        <label for="strict">Strict: 
+          <input type="checkbox" id="strict">  
+        </label>
+        <label for="faster">Speed: 
+          <input type="checkbox" id="faster">                    
+        </label>
+        <label for="to-ten">To 10: 
+          <input name="rounds" type="radio" id="to-ten" checked>   
+        </label>
+        <label for="to-twenty">To 20: 
+          <input name="rounds" type="radio" id="to-twenty">  
+        </label>
+        <label for="endless">Endless: 
+          <input name="rounds" type="radio" id="endless">
+        </label>
+        <button id="start">Start!</button>
+      </div>
+      
+    </div>
+    <p>Turn: <span id="score">0</span></p>
+    <!-- Instruction pop up-->
+    <div id="intro" class="pop-up">
+      <div class="pop-up-card">
+        <h2>Welcome to Simon</h2>
+        <p>Choose the board size at the top.</p>
+        <p>If you would like to not allow mistakes, check strict.</p>
+        <p>To shorten the flashes, check speed.</p>
+        <p>You can play to 10, 20 or endlessly!</p>
+        <p>You can reset the board at any time.</p>
+        <button id="close-pop-up">Got It!</button>
+      </div>
+    </div>
+
+    <div id="game-over">
+      <div id="end">
+        <h2>Game Over!</h2>
+        <p>You survived for <span id="end-time">0</span> rounds!</p>
+        <a href="simon.html">Play Again</a>
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+
+    <div id="board">
+      <div id="firstcolor" class="colour"></div>
+      <div id="secondcolor" class="colour"></div>
+      <div id="thirdcolor" class="colour"></div>
+      <div id="fourthcolor" class="colour"></div>
+      <div id="fifthcolor" class="colour"></div>
+      <div id="sixthcolor" class="colour"></div>
+      <div id="seventhcolor" class="colour"></div>
+      <div id="eighthcolor" class="colour"></div>
+      <div id="ninthcolor" class="colour"></div>
+    </div>
+
+    <div id="warning">
+      <h1>Get a bigger screen!</h1>
+      <small>This won't work on screens less than 360px wide (and reasonably high).</small>
+    </div>
+
+  </section>
+  <!-- Footer with social links, filler for now -->
+  <footer>
+    <button id="toggle-display">Toggle Display</button>
+  </footer>
+  <script src="../assets/scripts/theme.js"></script>
+  <script src="../assets/scripts/simon.js"></script>
+  <script src="../assets/scripts/popups.js"></script>
+  <script src="../assets/scripts/gamemenu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+/* Styling stats display */
+#stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+/* Styling for game board */
+#board {
+  width: 308px;
+  height: 308px;
+  margin: auto;
+  border: 4px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--menu-background);
+  box-shadow: 0 0 4px 4px var(--shadow);
+}
+
+#board div {
+  width: 20px;
+  height: 20px;
+}
+
+/* Styling for game sprites */
+.invader {
+  background: url("../images/invaders/alien.png") center / contain no-repeat;
+  background-size: 80%;
+}
+
+.tank {
+  background: url("../images/invaders/tank.png") center / contain no-repeat;
+}
+
+.boss {
+  background: url("../images/invaders/boss.png") center / contain no-repeat;
+}
+
+.missile {
+  background: url("../images/invaders/missile.png") center / contain no-repeat;
+}
+
+.boom {
+  background: url("../images/invaders/boom.png") center / contain no-repeat;
+}
+
+.bomb {
+  background: url("../images/invaders/bomb.png") center / contain no-repeat;
+}
+
+/* Styling for on screen controls */
+#directions {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+#directions button {
+  border-style: none;
+  height: 80px;
+  width: 80px;
+  touch-action: manipulation;
+}
+
+#left {
+  background: url("../images/invaders/left.png") center / cover no-repeat;
+}
+
+#right {
+  background: url("../images/invaders/right.png") center / cover no-repeat;
+}
+
+#fire {
+  background-color: var(--secondary-background);
+  color: var(--secondary-text);
+  font-weight: 700;
+  width: 100px !important;
+}
+
+/* Media queries */
+/* Large Screens */
+@media (min-width: 800px) and (min-height: 800px) {
+  #board {
+    width: 458px;
+    height: 458px;
+  }
+  #board div {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 1200px) and (min-height: 1080px) {
+  #board {
+    width: 608px;
+    height: 608px;
+  }
+  #board div {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  button {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 400px),
+(max-height: 600px) {
+  button {
+    margin: 5px;
+  }
+  #board {
+    width: 233px;
+    height: 233px;
+  }
+  #board div {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 300px) {
+  #directions button {
+    height: 60px;
+    width: 60px;
+  }
+}

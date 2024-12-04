@@ -1,0 +1,75 @@
+#text-speed {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.terminal {
+    background-color: var(--menu-background);
+    width: 700px;
+    height: 400px;
+    border-radius: 8px;
+    margin: 2em auto;
+    position: relative;
+    box-shadow: 0 0 4px 4px var(--shadow);
+}
+
+#message {
+    width: 90%;
+    height: 85%;
+    padding: 1.5em 0;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--menu-text);
+    overflow-y: auto;
+    border-bottom: 2px dotted var(--text-interaction);
+}
+
+.response {
+    position: absolute;
+    bottom: 1em;
+    left: 5%;
+    margin: 0 auto;
+}
+
+.input-text {
+    color: var(--menu-text);
+}
+
+#user-input {
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid var(--menu-text);
+    background: transparent;
+    font-size: 0.75em;
+    font-family: "Press Start 2p";
+    color: var(--menu-text);
+    caret-color: var(--menu-text);
+}
+
+#user-input:hover {
+    content: "Sure?";
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.5em;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--text-interaction);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--menu-text);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--menu-text);
+  }

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Pixel Arcade is a collection of single player games for mobile and desktop browsers.">
+  <meta name="keywords" content="Pixel Arcade, games, gaming, mobile, browser, HTML, CSS, JavaScript">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/fishtank.css" rel="stylesheet">
+  <title>Pixel's Arcade | Fishtank</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+</head>
+
+<body>
+  <!-- Header containing title link, logos and navbar -->
+  <header>
+    <div id="header-title">
+      <img src="../assets/images/pixel-head-green.png" alt="Green pixel head logo">
+      <a href="../index.html" aria-label="Navigates to home menu page"> Pixel's Arcade </a>
+      <img src="../assets/images/pixel-head-green.png" alt="Green pixel head logo">
+    </div>
+    <div id="header-menu">
+      <button id="open-menu" type="button" aria-label="Open menu">Menu</button>
+    </div>
+  </header>
+  <!-- Main section containing the game menu-->
+  <section id="main-screen">
+
+    <!-- Menu modal -->
+    <div class="menu-pop-up">
+      <div class="menu-pop-up-card">
+        <h2>Menu</h2>
+        <ul>
+          <li>
+            <a href="../index.html" aria-label="Home screen">Home</a>
+          </li>
+        </ul>
+        <ol id="list-of-games"></ol>
+      </div>
+      <button id="close-menu" type="button" aria-label="Close">Close</button>
+    </div>
+    
+    <h1>Fishtank</h1>
+    <p id="instructions">Instructions</p>
+
+    <!-- Game Buttons -->
+    <div>
+      <button id="start">Start!</button>
+      <button id="reset">Reset</button>
+    </div>
+
+    <!-- Stats -->
+    <div id="stats">
+      <p>Credits: <span id="credits">0</span></p>
+    </div>
+
+    <!-- Canvas for game -->
+    <canvas width="320" height="288" id="canvas"></canvas>
+
+    <div id="options">
+      <button id="tanks">Tanks</button>
+      <button id="fish">Fish</button>
+      <button id="misc">Misc</button>
+    </div>
+
+    <div id="message">
+    </div>
+
+    <div id="show-tanks" class="pop-up">
+      <div>
+          <label for="small">Small Tank| 100 Cr</label>
+          <input type="radio" name="tank" value="small-100" id="small">
+      </div>
+      <div>
+        <label for="medium">Medium Tank | 500 Cr</label>
+        <input type="radio" name="tank" value="medium-500" id="medium">
+      </div>
+      <div>
+        <label for="large">Large Tank | 1000 Cr</label>
+        <input type="radio" name="tank" value="large-1000" id="large">
+      </div>
+      <div>
+        <button id="select-tank">Select</button>
+        <button class="cancel">Cancel</button>
+      </div>
+    </div>
+
+    <div id="show-fish" class="pop-up">
+      <div>
+        <label for="clown"><img class="shop-imgs" src="../assets/images/fishtank/clown.png"> | 400 Cr</label>
+        <input type="radio" name="fishes" value="0-400" id="clown">
+      </div>
+      <div>
+        <label for="gold"><img class="shop-imgs" src="../assets/images/fishtank/gold.png"> | 400 Cr</label>
+        <input type="radio" name="fishes" value="32-400" id="gold">
+      </div>
+      <div>
+        <label for="blue"><img class="shop-imgs" src="../assets/images/fishtank/blue.png"> | 400 Cr</label>
+        <input type="radio" name="fishes" value="64-400" id="blue">        
+      </div>
+      <div>
+        <label for="angel"><img class="shop-imgs" src="../assets/images/fishtank/angel.png"> | 400 Cr</label>
+        <input type="radio" name="fishes" value="160-400" id="angel">
+      </div>
+      <div>
+        <label for="cat"><img class="shop-imgs" src="../assets/images/fishtank/cat.png"> | 400 Cr</label>
+        <input type="radio" name="fishes" value="128-400" id="cat">
+      </div>
+      <div>
+        <label for="striped"><img class="shop-imgs" src="../assets/images/fishtank/striped.png"> | 400 Cr</label>
+        <input type="radio" name="fishes" value="96-400" id="striped">        
+      </div>
+      <div>
+        <button id="select-fish">Select</button>
+        <button class="cancel">Cancel</button>
+      </div>
+    </div>
+
+    <div id="show-misc" class="pop-up">
+      <div>
+        <label for="food">Food | 100 Cr</label>
+        <input type="radio" name="misc" value="food-100" id="food">
+      </div>
+      <div>
+        <label for="sponge">Sponge | 200 Cr</label>
+        <input type="radio" name="misc" value="sponge-200" id="sponge">
+      </div>
+      <div>
+        <label for="snail">Snail | 300 Cr</label>
+        <input type="radio" name="misc" value="snail-300" id="snail">        
+      </div>
+      <div>
+        <button id="select-misc">Select</button>
+        <button class="cancel">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Instruction pop up-->
+    <div id="intro" class="pop-up">
+      <div class="pop-up-card">
+        <h2>Welcome to Fishtank!</h2>
+        <p>Get a tank.</p>
+        <p>Get a fish.</p>
+        <p>Take care of your fish.</p>
+        <p>Make things more complicated for yourself.</p>
+        <button id="close-pop-up">Got It!</button>
+      </div>
+    </div>
+
+    <!-- Game Over -->
+    <div id="game-over" class="pop-up">
+      <div id="end" class="pop-up-card">
+        <h2>Game Over!</h2>
+        <p>You survived <span id="time"></span> seconds.</p>
+        <p>And scored <span id="result"></span>.</p>
+        <a href="fishtank.html">Play Again</a>
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <button id="toggle-display">Toggle Display</button>
+  </footer>
+  <script src="../assets/scripts/theme.js"></script>
+  <script src="../assets/scripts/fishtank.js"></script>
+  <script src="../assets/scripts/popups.js"></script>
+  <script src="../assets/scripts/gamemenu.js"></script>
+</body>
+
+</html>

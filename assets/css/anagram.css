@@ -1,0 +1,45 @@
+#board {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#anagram {
+  font-size: 4rem;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid var(--secondary-background);
+  color: var(--primary-text);
+  font-family: "Press Start 2P";
+  background: transparent;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 360px;
+}
+
+#user-guess:hover {
+  content: "Sure?";
+}
+
+#round {
+  display: none;
+}
+
+#next-round {
+  background-color: var(--primary-background);
+  color: var(--apple-black);
+  padding: 1em 2em;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: 0.6s;
+  font-weight: 900;
+}
+
+#next-round:hover {
+  background-color: var(--text-interaction);
+  color: var(--tertiary-text);
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Pixel Arcade is a collection of single player games for mobile and desktop browsers.">
+  <meta name="keywords" content="Pixel Arcade, games, gaming, mobile, browser, HTML, CSS, JavaScript">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/wordsearch.css" rel="stylesheet">
+  <title>Pixel's Arcade | Word Search</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+</head>
+
+<body>
+  <!-- Header containing title link, logos and navbar -->
+  <header>
+    <div id="header-title">
+      <img src="../assets/images/pixel-head-green.png" alt="Green pixel head logo">
+      <a href="../index.html" aria-label="Navigates to home menu page"> Pixel's Arcade </a>
+      <img src="../assets/images/pixel-head-green.png" alt="Green pixel head logo">
+    </div>
+    <div id="header-menu">
+      <button id="open-menu" type="button" aria-label="Open menu">Menu</button>
+    </div>
+  </header>
+
+  <!-- Main section containing the game menu-->
+  <section id="main-screen">
+
+    <!-- Menu modal -->
+    <div class="menu-pop-up">
+      <div class="menu-pop-up-card">
+        <h2>Menu</h2>
+        <ul>
+          <li>
+            <a href="../index.html" aria-label="Home screen">Home</a>
+          </li>
+        </ul>
+        <ol id="list-of-games"></ol>
+      </div>
+      <button id="close-menu" type="button" aria-label="Close">Close</button>
+    </div>
+
+    <h1>Word Search</h1>
+    <p id="instructions">Instructions</p>
+
+    <!-- Game Buttons -->
+    <div id="buttons">
+      <button id="start">Start!</button>
+      <button id="reset">Reset</button>
+    </div>
+
+    <div id="category"></div>
+    <div id="game"></div>
+    <div id="correct-words"></div>
+    <div id="message"></div>
+
+    <!-- Instruction pop up-->
+    <div id="intro" class="pop-up">
+      <div class="pop-up-card">
+        <h2>Welcome to Word Search</h2>
+        <p>Find words related to the theme.</p>
+        <p>Correct words will be displayed when you find them.</p>
+        <p>There are ten in total.</p>
+        <button id="close-pop-up">Got It!</button>
+      </div>
+    </div>
+    <!-- Game Over -->
+    <div id="game-over" class="pop-up">
+      <div id="end" class="pop-up-card">
+        <h2>Game Over!</h2>
+        <p>You found all the words!</p>
+        <a href="wordsearch.html">Play Again</a>
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+
+  </section>
+  <footer>
+    <button id="toggle-display">Toggle Display</button>
+  </footer>
+  <script src="../assets/scripts/theme.js"></script>
+  <script src="../assets/scripts/wordsearch.js"></script>
+  <script src="../assets/scripts/popups.js"></script>
+  <script src="../assets/scripts/gamemenu.js"></script>
+</body>
+
+</html>

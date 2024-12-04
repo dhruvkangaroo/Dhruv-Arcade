@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Pixel Arcade is a collection of single player games for mobile and desktop browsers.">
+  <meta name="keywords" content="Pixel Arcade, games, gaming, mobile, browser, HTML, CSS, JavaScript">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/rps.css" rel="stylesheet">
+  <title>Pixel's Arcade | Rock, Paper, Scissors</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+</head>
+
+<body>
+  <!-- Header containing title link, logos and navbar -->
+  <header>
+    <div id="header-title">
+      <img src="../assets/images/pixel-head-green.png" alt="Green pixel head logo">
+      <a href="../index.html" aria-label="Navigates to home menu page"> Pixel's Arcade </a>
+      <img src="../assets/images/pixel-head-green.png" alt="Green pixel head logo">
+    </div>
+    <div id="header-menu">
+      <button id="open-menu" type="button" aria-label="Open menu">Menu</button>
+    </div>
+  </header>
+  <!-- Main section containing the game menu-->
+  <section id="main-screen">
+
+    <!-- Menu modal -->
+    <div class="menu-pop-up">
+      <div class="menu-pop-up-card">
+        <h2>Menu</h2>
+        <ul>
+          <li>
+            <a href="../index.html" aria-label="Home screen">Home</a>
+          </li>
+        </ul>
+        <ol id="list-of-games"></ol>
+      </div>
+      <button id="close-menu" type="button" aria-label="Close">Close</button>
+    </div>
+
+    <h1>Rock, Paper, Scissors</h1>
+    <p id="instructions">Instructions</p>
+
+    <!-- HTML for game -->
+    <div id="board">
+      <!-- Buttons to select best of or reset board-->
+      <div id="stats">
+        <div id="type">
+          <h2>Version: </h2>
+          <button id="classic">RPS!</button>
+          <button id="rpsls">RPSLS!</button>
+        </div>
+        <div id="rounds">
+          <h2>Rounds: </h2>
+          <button id="three-rounds">Best of Three!</button>
+          <button id="five-rounds">Best of Five!</button>
+        </div>
+        
+        <button id="reset">Reset</button>
+      </div>
+
+      <!-- Display the computer and user choices next to each other-->
+      <div id="choices">
+        <div>
+          <h2>Computer Choice: </h2>
+          <img id="computer-choice" src="../assets/images/rps/all.png" alt="Computer's choice">
+          <p>Computer Score: <span id="computer-score">0</span></p>
+        </div>
+        <div>
+          <h2>Your Choice:</h2>
+          <img id="user-choice" src="../assets/images/rps/all.png" alt="User's choice">
+          <p>Your Score: <span id="user-score">0</span></p>
+        </div>
+      </div>
+
+      <!-- To display the results of each round-->
+      <p>Round <span id="round">1</span>: <span id="result"></span></p>
+
+      <!-- Options for the user to select -->
+      <h2>Select one:</h2>
+      <div id="options">
+        <img id="rock" class="selections" src="../assets/images/rps/rock.png" alt="rock image">
+        <img id="paper" class="selections" src="../assets/images/rps/paper.png" alt="paper image">
+        <img id="scissors" class="selections" src="../assets/images/rps/scissors.png" alt="scissors image">
+        <img id="lizard" class="selections" src="../assets/images/rps/lizard.png" alt="lizard image">
+        <img id="spock" class="selections" src="../assets/images/rps/spock.png" alt="spock image">
+      </div>
+    </div>
+
+    <!-- Instruction pop up-->
+    <div id="intro" class="pop-up">
+      <div class="pop-up-card">
+        <h2>Welcome to Rock, Paper, Scissors</h2>
+        <p>Is your luck better than a computers?</p>
+        <p>Choose classic Rock Paper Scissors or Rock Paper Scissors Lizard Spock</p>
+        <p>Choose between best of three or best of five to find out.</p>
+        <p>Select the images at the bottom of the board to pick your weapon.</p>
+        <p>You can reset the board at any time.</p>
+        <button id="close-pop-up">Got It!</button>
+      </div>
+    </div>
+
+    <!-- Game Over-->
+    <div id="game-over" class="pop-up">
+      <div id="end" class="pop-up-card">
+        <h2>Game Over!</h2>
+        <p id="end-score">0</p>
+        <a href="rps.html">Play Again</a>
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+
+  </section>
+  <!-- Footer with social links -->
+  <footer>
+    <button id="toggle-display">Toggle Display</button>
+  </footer>
+  <script src="../assets/scripts/theme.js"></script>
+  <script src="../assets/scripts/rps.js"></script>
+  <script src="../assets/scripts/popups.js"></script>
+  <script src="../assets/scripts/gamemenu.js"></script>
+</body>
+
+</html>

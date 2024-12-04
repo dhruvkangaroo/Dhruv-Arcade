@@ -1,0 +1,140 @@
+/* Board styling */
+
+#hover-area {
+    display: grid;
+    grid-template-columns: repeat(7, 64px);
+    grid-template-rows: 1;
+    width: 448px;
+    height: 64px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.hover-disc {
+    width: 54px;
+    height: 54px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+#play-area {
+    display: grid;
+    grid-template-columns: repeat(7, 64px);
+    grid-template-rows: repeat(6, 64px);
+    width: 464px;
+    height: 400px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    border-radius: 8px;
+    border: 8px solid darkblue
+}
+
+.spot {
+    background-color: var(--tertiary-text);
+    width: 54px;
+    height: 54px;
+    margin: auto;
+    border: 2px solid blue;
+    border-radius: 50%;
+}
+
+.disc {
+    width: 54px;
+    height: 54px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: red;
+    border: 6px dashed darkred;
+}
+
+.yellow {
+    background-color: yellow;
+    border: 6px dashed darkgoldenrod;
+}
+
+
+/* Options Styling */
+#options {
+    display: none;
+}
+
+#options > div {
+    justify-content: space-between;
+}
+
+input[type="radio"]:checked {
+    accent-color: var(--text-interaction);
+    background-color: var(--tertiary-text);
+}
+
+#player-selected, #red-selected, #yellow-selected {
+    margin-top: 4px;
+    color: var(--text-interaction);
+    display: none;
+}
+
+input[value="computer"]:checked ~ #player-selected {
+    display: block;
+}
+
+input[value="human"]:checked ~ #player-selected {
+    display: none;
+}
+
+input[value="red"]:checked ~ #red-selected {
+    display: block;
+}
+
+input[value="red"]:checked ~ #yellow-selected {
+    display: none;
+}
+
+input[value="yellow"]:checked ~ #yellow-selected {
+    display: block;
+}
+
+input[value="yellow"]:checked ~ #red-selected {
+    display: none;
+}
+
+/* Media query for smaller screens */
+
+@media (max-width: 530px) {
+    #hover-area {
+        grid-template-columns: repeat(7, 44px);
+        width: 308px;
+        height: 44px;
+    }
+
+    .hover-disc {
+        width: 40px;
+        height: 40px;
+    }
+
+    #play-area {
+        grid-template-columns: repeat(7, 44px);
+        grid-template-rows: repeat(6, 44px);
+        width: 324px;
+        height: 280px;
+    }
+
+    .spot {
+        width: 40px;
+        height: 40px;
+    }
+
+    .disc {
+        width: 40px;
+        height: 40px;
+    }
+
+    .red, .yellow {
+        border-width: 4px;
+    }
+    
+}

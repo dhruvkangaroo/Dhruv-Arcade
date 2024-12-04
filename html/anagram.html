@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Pixel Arcade is a collection of single player games for mobile and desktop browsers.">
+  <meta name="keywords" content="Pixel Arcade, games, gaming, mobile, browser, HTML, CSS, JavaScript">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/anagram.css" rel="stylesheet">
+  <title>Pixel's Arcade | Anagram</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+</head>
+
+<body>
+  <!-- Header containing title link, logos and navbar -->
+  <header>
+    <div id="header-title">
+      <img src="../assets/images/pixel-head-green.png" alt="Green pixel head logo">
+      <a href="../index.html" aria-label="Navigates to home menu page"> Pixel's Arcade </a>
+      <img src="../assets/images/pixel-head-green.png" alt="Green pixel head logo">
+    </div>
+    <div id="header-menu">
+      <button id="open-menu" type="button" aria-label="Open menu">Menu</button>
+    </div>
+  </header>
+
+  <!-- Main section containing the game menu-->
+  <section id="main-screen">
+
+    <!-- Menu modal -->
+    <div class="menu-pop-up">
+      <div class="menu-pop-up-card">
+        <h2>Menu</h2>
+        <ul>
+          <li>
+            <a href="../index.html" aria-label="Home screen">Home</a>
+          </li>
+        </ul>
+        <ol id="list-of-games"></ol>
+      </div>
+      <button id="close-menu" type="button" aria-label="Close">Close</button>
+    </div>
+
+    <h1>Anagram</h1>
+    <p id="instructions">Instructions</p>
+
+    <div id="board">
+      <!-- Game Buttons -->
+      <div id="buttons">
+        <button id="start">Start!</button>
+        <button id="reset">Reset</button>
+      </div>
+
+      <!-- Display anagram-->
+      <div id="anagram-display">
+        <p id="category">The category is: <span id="category-display"></span>
+        </p>
+      </div>
+
+      <h3 id="anagram">anagram</h3>
+
+      <!-- User input-->
+      <div id="user-input">
+        <label>Enter your guess: </label>
+        <input type="text" id="user-guess">
+        <button type="submit" id="guess-button">Enter</button>
+      </div>
+
+      <!-- Stats -->
+      <div id="stats">
+        <p>Round: <span id="score">1</span></p>
+      </div>
+    </div>
+
+    <!-- Instruction pop up-->
+    <div id="intro" class="pop-up">
+      <div class="pop-up-card">
+        <h2>Welcome to the Anagram Game</h2>
+        <p>There are five categories: </p>
+        <p> Movies, Food, Songs, Animals, and Books</p>
+        <p>When you press start you'll get an anagram</p>
+        <p>of a single word or title from one of these</p>
+        <p>categories</p>
+        <p>If you can get five anagrams right in a row,</p>
+        <p>YOU WIN!</p>
+        <p>But just one wrong, and you lose!</p>
+        <button id="close-pop-up">Got It!</button>
+      </div>
+    </div>
+
+    <!-- Round result pop up-->
+    <div id="round" class="pop-up">
+      <div class="pop-up-card">
+        <h3 id="round-result"></h3>
+        <h3>The word was <span class="right-word"></span></h3>
+        <button id="next-round">Next Round</button>
+      </div>
+    </div>
+
+    <!-- Game Over -->
+    <div id="game-over" class="pop-up">
+      <div id="end" class="pop-up-card">
+        <h2>Game Over!</h2>
+        <p>YOU <span id="result"></span></p>
+        <h3>The word was <span class="right-word"></span></h3>
+        <a href="anagram.html">Play Again</a>
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+
+  </section>
+  <!-- Footer with theme toggle -->
+  <footer>
+    <button id="toggle-display">Toggle Display</button>
+  </footer>
+  <script src="../assets/scripts/theme.js"></script>
+  <script src="../assets/scripts/anagram.js"></script>
+  <script src="../assets/scripts/popups.js"></script>
+  <script src="../assets/scripts/gamemenu.js"></script>
+</body>
+
+</html>

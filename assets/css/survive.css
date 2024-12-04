@@ -1,0 +1,66 @@
+/* Styling stats display */
+#stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+#canvas {
+    border: 4px solid var(--secondary-background);
+    box-shadow: 0 0 4px 4px var(--shadow);
+}
+
+/* Styling for on screen controls */
+#directions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#arrows {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+#arrows button {
+    border-style: none;
+    height: 80px;
+    width: 80px;
+    touch-action: manipulation;
+}
+
+#left {
+    background: url("../images/snake/left.png") center / cover no-repeat;
+}
+
+#up {
+    background: url("../images/snake/up.png") center / cover no-repeat;
+}
+
+#down{
+    background: url("../images/snake/down.png") center / cover no-repeat;
+}
+
+#right {
+    background: url("../images/snake/right.png") center / cover no-repeat;
+}
+
+#fire {
+    background-color: var(--secondary-background);
+    color: var(--primary-text);
+    font-weight: 700;
+}
+
+body { 
+    -webkit-touch-callout: none !important; 
+}
+button,  #directions { 
+    -webkit-user-select: none !important; 
+    user-select: none !important;
+}

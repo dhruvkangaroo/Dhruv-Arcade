@@ -1,0 +1,75 @@
+#canvas {
+    width: 320px;
+    height: 288px;
+}
+
+/* Styling stats */
+#stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 8px auto;
+    gap: 8px;
+}
+
+/* Styling for on screen controls */
+#directions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#arrows {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+#arrows button {
+    border-style: none;
+    height: 80px;
+    width: 80px;
+    touch-action: manipulation;
+}
+
+#left {
+    background: url("../images/snake/left.png") center / cover no-repeat;
+}
+
+#up {
+    background: url("../images/snake/up.png") center / cover no-repeat;
+}
+
+#down{
+    background: url("../images/snake/down.png") center / cover no-repeat;
+}
+
+#right {
+    background: url("../images/snake/right.png") center / cover no-repeat;
+}
+
+#interact {
+    background-color: var(--apple-black);
+    color: var(--apple-light-green);
+    font-weight: 700;
+}
+
+body { 
+    -webkit-touch-callout: none !important; 
+}
+button,  #directions { 
+    -webkit-user-select: none !important; 
+    user-select: none !important;
+}
+
+@media (min-width: 680px) {
+    #canvas {
+        width: 640px;
+        height: 576px;
+    }
+}

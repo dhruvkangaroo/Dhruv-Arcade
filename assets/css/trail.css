@@ -1,0 +1,118 @@
+/* Styling stats display */
+#board {
+    width: 520px;
+    margin: 10px auto;
+    box-shadow: 0 10px 15px;
+    background-color: var(--secondary-background);
+    color: var(--secondary-text);
+}
+
+#stats {
+    border-left: 4px solid var(--text-interaction);
+    border-right: 4px solid var(--text-interaction);
+    border-top: 4px solid var(--text-interaction);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#stats div {
+    text-align: left;
+    margin: 4px;
+    width: 248px;
+}
+
+#canvas {
+    border: 4px solid var(--text-interaction);
+}
+
+#controls {
+    border-left: 4px solid var(--text-interaction);
+    border-right: 4px solid var(--text-interaction);
+}
+
+#controls-top, #controls-mid, #controls-bottom {
+    border-bottom: 4px solid var(--text-interaction);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: center;
+}
+
+#controls button {
+    border: 4px solid var(--text-interaction);
+    border-radius: 0;
+    margin: -4px 0;
+}
+
+#controls-bottom {
+    border-bottom: 4px solid var(--text-interaction);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
+    align-items: center;
+}
+
+#game-choices button,
+#enter-chars,
+#rest-options,
+#close-game-pop-up {
+    background-color: var(--primary-background);
+    color: var(--primary-text);
+    padding: 0.5em 1.5em;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: 0.6s;
+}
+
+#game-choices button:hover,
+#enter-chars:hover,
+#rest-options:hover,
+#close-game-pop-up:hover {
+    background-color: var(--text-interaction);
+    color: var(--secondary-text);
+}
+
+#game-pop-up {
+    display: none;
+}
+
+#char-pop-up {
+    display: none;
+}
+
+#rest-pop-up {
+    display: none;
+}
+
+#rest-pop-up input,
+#char-pop-up input {
+    border: 0;
+    outline: 0;
+    margin: 8px;
+    color: var(--menu-text);
+    font-family: "Press Start 2P";
+    border-bottom: 2px solid var(--text-interaction);
+    background: transparent;
+    font-size: 1rem;
+    text-align: center;
+}
+
+fieldset {
+    margin: 8px 8px 8px -4px;
+    padding: 8px;
+    border-color: var(--text-interaction);
+}
+
+fieldset div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+fieldset input {
+    accent-color: var(--secondary-text);    
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Pixel Arcade is a collection of single player games for mobile and desktop browsers.">
+  <meta name="keywords" content="Pixel Arcade, games, gaming, mobile, browser, HTML, CSS, JavaScript">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/trail.css" rel="stylesheet">
+  <title>Pixel's Arcade | Apocalypse Trail</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+</head>
+
+<body>
+  <!-- Header containing title link, logos and navbar -->
+  <header>
+    <div id="header-title">
+      <img src="../assets/images/pixel-head-green.png" alt="Green pixel head logo">
+      <a href="../index.html" aria-label="Navigates to home menu page"> Pixel's Arcade </a>
+      <img src="../assets/images/pixel-head-green.png" alt="Green pixel head logo">
+    </div>
+    <div id="header-menu">
+      <button id="open-menu" type="button" aria-label="Open menu">Menu</button>
+    </div>
+  </header>
+
+  <!-- Main section containing the game menu-->
+  <section id="main-screen">
+
+    <!-- Menu modal -->
+    <div class="menu-pop-up">
+      <div class="menu-pop-up-card">
+        <h2>Menu</h2>
+        <ul>
+          <li>
+            <a href="../index.html" aria-label="Home screen">Home</a>
+          </li>
+        </ul>
+        <ol id="list-of-games"></ol>
+      </div>
+      <button id="close-menu" type="button" aria-label="Close">Close</button>
+    </div>
+
+    <h1>Apocalypse Trail</h1>
+    <p id="instructions">Instructions</p>
+
+    <!-- Game Buttons -->
+    <div>
+      <button id="start">Start!</button>
+      <button id="reset">Reset</button>
+    </div>
+
+    <div id="board">
+      <!-- Stats -->
+      <div id="stats">
+        <div id="day">
+          <p>Day: <span id="day-display">0</span></p>
+        </div>
+        <div id="weather">
+          <p>Weather: <span id="weather-display">Fine</span></p>
+        </div>
+        <div id="food">
+          <p>Food: <span id="food-display">0</span>kg</p>
+        </div>
+        <div id="water">
+          <p>Water: <span id="water-display">0</span>l</p>
+        </div>
+        <div id="pace">
+          <p>Pace: <span id="pace-display">Normal</span></p>
+        </div>
+        <div id="mood">
+          <p>Mood: <span id="mood-display">Okay</span></p>
+        </div>
+      </div>
+
+      <!-- Canvas for game -->
+      <canvas width="512" height="218" id="canvas"></canvas>
+
+      <div id="controls">
+        <div id="controls-top">
+          <p>Actions: </p>
+          <button type="button" id="scavenge">Scavenge</button>
+          <button type="button" id="rest">Rest</button>
+        </div>
+        <div id="controls-mid">
+          <p>Check: </p>
+          <button type="button" id="check-inventory">Inventory</button>
+          <button type="button" id="status">Status</button>
+        </div>
+        <div id="controls-bottom">
+          <p>Set Pace: </p>
+          <button type="button" id="pace-slow">Slow</button>
+          <button type="button" id="pace-normal">Normal</button>
+          <button type="button" id="pace-fast">Fast</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game pop up for info and decisions -->
+    <div id="game-pop-up" class="pop-up">
+      <div class="pop-up-card">
+        <div id="game-text"></div>
+        <div id="game-choices"></div>
+        <button id="close-game-pop-up">Okay</button>
+      </div>
+    </div>
+
+    <!-- Character creation pop up -->
+    <div id="char-pop-up" class="pop-up">
+      <div class="pop-up-card">
+        <h2>Welcome to Apocalypse Trail!</h2>
+        <p>You can add between 1 and 3 characters.</p>
+        <label for="first-char">First Character:</label>
+        <input type="text" id="first-char" name="characters" autocomplete="off">
+        <label for="second-char">Second Character:</label>
+        <input type="text" id="second-char" name="characters" autocomplete="off">
+        <label for="third-char">Third Character:</label>
+        <input type="text" id="third-char" name="characters" autocomplete="off">
+        <button id="enter-chars">Enter</button>
+      </div>
+    </div>
+
+    <!-- Rest pop up-->
+    <div id="rest-pop-up" class="pop-up">
+      <div class="pop-up-card">
+        <h2>Resting...</h2>
+        <fieldset id="eating">
+          <legend>Eat</legend>
+          <div>
+            <label for="eat-nothing">Nothing:</label>
+            <input type="radio" value="nothing" name="eating" id="eat-nothing" checked>
+          </div>
+          <div>
+            <label for="eat-small">Small meal:</label>
+            <input type="radio" value="small-meal" name="eating" id="eat-small">
+          </div>
+          <div>
+            <label for="eat-large">Large meal:</label>
+            <input type="radio" value="large-meal" name="eating" id="eat-large">
+          </div>
+        </fieldset>
+        <fieldset id="drinking">
+          <legend>Drink</legend>
+          <div>
+            <label for="drinks-nothing">Nothing:</label>
+            <input type="radio" value="nothing" name="drinking" id="drink-nothing" checked>
+          </div>
+          <div>
+            <label for="drinks-small">Small drink:</label>
+            <input type="radio" value="small-drink" name="drinking" id="drink-small">
+          </div>
+          <div>
+            <label for="drinks-large">Large drink:</label>
+            <input type="radio" value="large-drink" name="drinking" id="drink-large">
+          </div>
+        </fieldset>
+        <fieldset id="resting">
+          <legend>Sleep</legend>
+          <div>
+            <label for="no-sleep">No sleep:</label>
+            <input type="radio" value="nothing" name="resting" id="no-sleep" checked>
+          </div>
+          <div>
+            <label for="short-sleep">Short sleep:</label>
+            <input type="radio" value="short-sleep" name="resting" id="short-sleep">
+          </div>
+          <div>
+            <label for="long-sleep">Long sleep:</label>
+            <input type="radio" value="long-sleep" name="resting" id="long-sleep">
+          </div>
+        </fieldset>
+        <button id="rest-options">Okay</button>
+      </div>
+    </div>
+
+    <!-- Instruction pop up-->
+    <div id="intro" class="pop-up">
+      <div class="pop-up-card">
+        <h2>Welcome to Apocalypse Trail!</h2>
+        <p>Make the trek across the barren landscape to a safe city you've heard about.</p>
+        <p>Keep an eye on your supplies, status and mood.</p>
+        <p>Make decisions.</p>
+        <button id="close-pop-up">Got It!</button>
+      </div>
+    </div>
+
+    <!-- Game Over -->
+    <div id="game-over" class="pop-up">
+      <div id="end" class="pop-up-card">
+        <h2>Game Over!</h2>
+        <p>You walked <span id="km-count"></span>kms in <span id="day-count"></span> days.</p>
+        <p id="outcome"></p>
+        <a href="trail.html">Play Again</a>
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+
+  </section>
+  <!-- Footer with social links -->
+  <footer>
+    <button id="toggle-display">Toggle Display</button>
+  </footer>
+  <script src="../assets/scripts/theme.js"></script>
+  <script src="../assets/scripts/trail.js"></script>
+  <script src="../assets/scripts/popups.js"></script>
+  <script src="../assets/scripts/gamemenu.js"></script>
+</body>
+
+</html>

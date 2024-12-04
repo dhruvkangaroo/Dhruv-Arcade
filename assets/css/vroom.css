@@ -1,0 +1,12 @@
+fieldset {
+    padding: 0.5rem;
+}
+
+input[type="radio"]:checked {
+    accent-color: var(--text-interaction);
+    background-color: var(--tertiary-text);
+}
+
+#car-choice {
+    display: none;
+}
